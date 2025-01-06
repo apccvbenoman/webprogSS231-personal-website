@@ -1,0 +1,42 @@
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+ }
+
+ header, footer {
+    background-color: aquamarine;
+    padding: 20px;
+ }
+
+ main {
+    display: flex;
+    flex-direction: row;
+ }
+
+ .main-content {
+    flex: 2;
+    background-color: aliceblue;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .main-content > div {
+        background-color: aquamarine;
+        width: 300px;
+        margin: 10px;
+        text-align: center;
+        line-height: 35px;
+        font-size: 30px;
+    }
+
+
+    
+ }
+
+ .sidebar {
+    flex: 1;
+    background-color: azure;
+    padding: 20px;
+ }
+
