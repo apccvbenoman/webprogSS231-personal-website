@@ -1,0 +1,31 @@
+<div class="flex-container">
+    <!-- Education Section -->
+    <div class="info-card" onclick="window.location.href='#';">
+        <h3>Education</h3>
+        <p>Hope in Christ Christian Academy</p>
+        <p>Philippine Pasay Chung Hua Academy</p>
+    </div>
+    <!-- Course Section -->
+    <div class="info-card" onclick="window.location.href='#';">
+        <h3>Course</h3>
+        <p>Bachelor of Science in Computer Science Major in Software Systems</p>
+    </div>
+    <!-- IT Experience Section -->
+    <div class="info-card" onclick="window.location.href='#';">
+        <h3>IT Experience</h3>
+        <p>Programming</p>
+    </div>
+</div>
+
+<div class="flex-container">
+    <!-- Hobbies/Interests Section -->
+    <div class="info-card" onclick="window.location.href='#';">
+        <h3>Hobbies/Interests</h3>
+        <p>Watching movies</p>
+    </div>
+    <!-- Goals/Life Dream Section -->
+    <div class="info-card" onclick="window.location.href='#';">
+        <h3>Goals/Life Dream</h3>
+        <p>To provide a comfortable life for myself that I can sustain</p>
+    </div>
+</div>
