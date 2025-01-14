@@ -1,9 +1,9 @@
 new Vue({
-    el: '#app',
+    el: '#gallery',
     data: {
         images: [
-            "https://via.placeholder.com/200",
-            "https://via.placeholder.com/200"
+            "https://scontent.fmnl5-2.fna.fbcdn.net/v/t1.15752-9/473121470_503519732758484_7169031855201699330_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=HE_gAHwalpMQ7kNvgHvT7NQ&_nc_zt=23&_nc_ht=scontent.fmnl5-2.fna&oh=03_Q7cD1gFq57lGx91Q-SxsVoN2pDLMLxUmPQIgreUoLz7UXNsDAw&oe=67ADA95C",
+            "https://scontent.fmnl5-2.fna.fbcdn.net/v/t1.15752-9/473007815_914812974174734_2264539277980305085_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=ZgahcL6whHgQ7kNvgEIxwZY&_nc_zt=23&_nc_ht=scontent.fmnl5-2.fna&oh=03_Q7cD1gHyMrmzGjXDSRE7WyIQXWPCBXzGepPeSDZzaXCDonDdgQ&oe=67AD917C"
         ]
     },
     methods: {
@@ -12,5 +12,6 @@ new Vue({
         }
     }
 });
+
 
 

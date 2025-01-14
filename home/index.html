@@ -5,52 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Profile</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flexbox-grid.css">
 </head>
 <body>
+    <!-- Navigation Links -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#education">Education</a></li>
+            <li><a href="#course">Course</a></li>
+            <li><a href="#experience">IT Experience</a></li>
+            <li><a href="#goals">Goals/Dream</a></li>
+            <li><a href="#gallery">Picture Gallery</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
     <header>
         <h1>My Personal Profile Webpage</h1>
     </header>
 
+    <!-- Sections -->
     <section class="container">
-        <div class="section-header">
-            <h2>About Me</h2>
-            <p>Hello, I'm Clar! I love technology and creativity. My goal is to learn and grow every day!</p>
+        <div class="section-header" id="education">
+            <h2>Education</h2>
+            <p>Hope in Christ Christian Academy</p>
+            <p>Philippine Pasay Chung Hua Academy</p>
         </div>
 
-        <div class="flex-container">
-            <div class="info-card">
-                <h3>Education</h3>
-                <p>Hope in Christ Christian Academy</p>
-                <p>Philippine Pasay Chung Hua Academy</p>
-            </div>
-            <div class="info-card">
-                <h3>Course</h3>
-                <p>Bachelor of Science in Computer Science</p>
-            </div>
-            <div class="info-card">
-                <h3>IT Experience</h3>
-                <p>Programming</p>
-            </div>
+        <div class="section-header" id="course">
+            <h2>Course</h2>
+            <p>Bachelor of Science in Computer Science</p>
         </div>
 
-        <div id="app" class="gallery">
+        <div class="section-header" id="experience">
+            <h2>IT Experience</h2>
+            <p>Programming</p>
+        </div>
+
+        <div class="section-header" id="goals">
+            <h2>Goals/Dream</h2>
+            <p>To provide a comfortable life for myself that I can sustain</p>
+        </div>
+
+        <!-- Picture Gallery -->
+        <div id="gallery" class="gallery">
             <div v-for="(image, index) in images" :key="index">
                 <img :src="image" :alt="'Image ' + (index + 1)" @click="viewImage(image)">
             </div>
         </div>
         <div class="gallery-text">
-            This is Saf and Bailey, my absolute favorite doggos in the world!
+            This is Saf and Baily, my absolute favorite doggos in the world!
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Clarice Benoman. All Rights Reserved.</p>
+        <p>&copy; 2025 Clar's Profile. All Rights Reserved.</p>
     </footer>
 
     <script src="vue-app.js"></script>
 </body>
 </html>
+
 
 
 
