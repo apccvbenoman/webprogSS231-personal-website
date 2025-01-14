@@ -4,24 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Profile Webpage</title>
-    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Styles from previous code */
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header and About Me Section here -->
+    <!-- Header -->
+    <header>
+        <h1>My Personal Profile Webpage</h1>
+    </header>
 
-    <!-- Vue.js Gallery Section here -->
+    <!-- About Me Section -->
+    <section class="container">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <p>Hey, I'm Clar! I am passionate about technology and creativity. I strive to constantly learn and grow in my field.</p>
+        </div>
 
+        <!-- Info Grid (Education, Course, IT Experience) -->
+        <div class="flex-container">
+            <div class="info-card" onclick="window.location.href='#';">
+                <h3>Education</h3>
+                <p>Hope in Christ Christian Academy</p>
+                <p>Philippine Pasay Chung Hua Academy</p>
+            </div>
+            <div class="info-card" onclick="window.location.href='#';">
+                <h3>Course</h3>
+                <p>Bachelor of Science in Computer Science Major in Software Systems</p>
+            </div>
+            <div class="info-card" onclick="window.location.href='#';">
+                <h3>IT Experience</h3>
+                <p>Programming</p>
+            </div>
+        </div>
+
+        <!-- Hobbies & Goals -->
+        <div class="flex-container">
+            <div class="info-card" onclick="window.location.href='#';">
+                <h3>Hobbies/Interests</h3>
+                <p>Watching movies</p>
+            </div>
+            <div class="info-card" onclick="window.location.href='#';">
+                <h3>Goals/Life Dream</h3>
+                <p>To provide a comfortable life for myself that I can sustain</p>
+            </div>
+        </div>
+
+        <!-- Picture Gallery using Vue.js -->
+        <div class="gallery text-center" id="app">
+            <div v-for="(image, index) in images" :key="index">
+                <img :src="image" :alt="'Gallery Image ' + (index + 1)" @click="viewImage(image)">
+            </div>
+        </div>
+        <!-- Description below the images -->
+        <div class="gallery-text">
+            This is Saf and Baily, my absolute favorite doggos in the world!
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Your Name. All Rights Reserved.</p>
     </footer>
 
-    <!-- Vue.js and Bootstrap JS -->
-    <script src="vue.js/vue.min.js"></script>
-    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Vue.js -->
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                images: [
+                    "image1.jpg",
+                    "image2.jpg",
+                    "image3.jpg",
+                    "image4.jpg"
+                ]
+            },
+            methods: {
+                viewImage(image) {
+                    window.open(image, "_blank");
+                }
+            }
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
+
 
