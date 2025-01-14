@@ -1,70 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Profile</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Profile Webpage</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div id="app">
-    <div class="container">
-      <header>
-        <h1>About Me</h1>
-      </header>
+    <!-- Header -->
+    <header>
+        <h1>My Personal Profile Webpage</h1>
+    </header>
 
-      <main>
-        <div class="profile">
-          <h2>Clarice Benoman</h2>
-          <p>A passionate software developer from the Philippines.</p>
+    <!-- About Me Section -->
+    <section class="container">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <p>Hi! I'm Clarice V. Benoman, People who know me well call me Clar! I'm 19 years old and a BSCS Student here at APC. Down below are other things about me!</p>
         </div>
 
-        <div class="grid">
-          <div class="education">
-            <h3>Education</h3>
-            <ul>
-              <li>Hope in Christ Christian Academy</li>
-              <li>Philippine Pasay Chung Hua Academy</li>
-            </ul>
-          </div>
-
-          <div class="course">
-            <h3>Course</h3>
-            <p>Bachelor of Science in Computer Science Major in Software Systems</p>
-          </div>
-
-          <div class="experience">
-            <h3>IT Experience</h3>
-            <ul>
-              <li>Programming</li>
-              <li>Web Development</li>
-              <li>App Development</li>
-            </ul>
-          </div>
-
-          <div class="hobbies">
-            <h3>Hobbies/Interests</h3>
-            <p>Watching movies, playing games, reading tech blogs.</p>
-          </div>
-
-          <div class="goals">
-            <h3>Goals/Life Dream</h3>
-            <p>To provide a comfortable life and make a positive impact on the world.</p>
-          </div>
+        <!-- Info Grid (Education, Course, IT Experience) -->
+        <div class="flex-container">
+            <div class="info-card" onclick="window.location.href='#';">
+                <h3>Education</h3>
+                <p>Primary - Elementary School: Hope in Christ Christian Academy</p>
+                <p>High School: Philippine Pasay Chung Hua Academy</p>
+                <p>Studied a bit of Mandarin from my time in Chung Hua as well</p>
+            </div>
+            <div class="info-card" onclick="window.location.href='#';">
+                <h3>Course</h3>
+                <p>Bachelor of Science in Computer Science Major in Software Systems</p>
+            </div>
+            <div class="info-card" onclick="window.location.href='#';">
+                <h3>IT Experience</h3>
+                <p>School Programming Tasks</p>
+                <p>Database Management</p>
+            </div>
         </div>
-      </main>
 
-      <footer>
-        <p>© 2025 Clarice V. Benoman | Asia Pacific College</p>
-      </footer>
-    </div>
-  </div>
+        <!-- Hobbies & Goals -->
+        <div class="flex-container">
+            <div class="info-card" onclick="window.location.href='#';">
+                <h3>Hobbies/Interests</h3>
+                <p>Watching movies/series</p>
+                <p>Learning something new to cook</p>
+            </div>
+            <div class="info-card" onclick="window.location.href='#';">
+                <h3>Goals/Life Dream</h3>
+                <p>Try to race a car, responsibly</p>
+                <p>To provide a comfortable life for myself that I can sustain</p>
+            </div>
+        </div>
 
-  <script src="app.js"></script>
+        <!-- Picture Gallery using Vue.js -->
+        <div class="gallery text-center" id="app">
+            <div v-for="(image, index) in images" :key="index">
+                <img :src="image" :alt="'Gallery Image ' + (index + 1)" @click="viewImage(image)">
+            </div>
+        </div>
+        <!-- Description below the images -->
+        <div class="gallery-text">
+            This is Saf and Bailey, my absolute favorite doggos in the world!
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Clarice Benoman. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Vue.js -->
+    <script src="app.js"></script>
+
 </body>
 </html>
+
+
 
 
 
