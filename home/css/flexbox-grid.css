@@ -1,10 +1,10 @@
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Align items horizontally with even spacing */
-    align-items: center; /* Vertically center the items */
-    gap: 20px; /* Add spacing between items */
-    padding: 20px; /* Add padding for container spacing */
+    justify-content: space-between; /* Spacing between grid items */
+    align-items: flex-start;
+    gap: 30px; /* Add consistent spacing between flex items */
+    padding: 20px;
 }
 
 .info-card {
@@ -13,10 +13,10 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    flex: 1 1 calc(30% - 20px); /* Flex to 30% width with space for gap */
-    max-width: calc(30% - 20px); /* Ensure it doesn't exceed this width */
-    transition: background-color 0.3s;
-    box-sizing: border-box; /* Include padding and border in width calculations */
+    flex: 1 1 calc(30% - 20px); /* Flexible width */
+    max-width: calc(30% - 20px);
+    box-sizing: border-box;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .info-card:hover {
@@ -25,16 +25,15 @@
 
 @media (max-width: 768px) {
     .info-card {
-        flex: 1 1 calc(45% - 20px); /* Adjust for smaller screens */
-        max-width: calc(45% - 20px);
+        flex: 1 1 calc(45% - 20px); /* Adapt for tablets */
     }
 }
 
 @media (max-width: 480px) {
     .info-card {
-        flex: 1 1 100%; /* Stack items on very small screens */
-        max-width: 100%;
+        flex: 1 1 100%; /* Stack items for small screens */
     }
 }
+
 
 

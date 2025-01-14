@@ -1,9 +1,17 @@
-new Vue({
-    el: '#app',
-    data: {
-        images: [
-            "https://scontent.xx.fbcdn.net/v/t1.15752-9/473007815_914812974174734_2264539277980305085_n.jpg",
-            "https://scontent.xx.fbcdn.net/v/t1.15752-9/473121470_503519732758484_7169031855201699330_n.jpg"
-        ]
-    }
-});
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            images: [
+                "https://i.pinimg.com/originals/2e/1c/5c/2e1c5c3b1280c9fa473205d75ef174f7.jpg",
+                "https://i.pinimg.com/originals/0f/24/d3/0f24d3127ab720efbe26c9b85f17b52b.jpg"
+            ]
+        },
+        methods: {
+            viewImage(image) {
+                window.open(image, "_blank");
+            }
+        }
+    });
+</script>
+
