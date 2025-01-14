@@ -1,0 +1,9 @@
+new Vue({
+    el: '#app',
+    data: {
+        images: [
+            "https://scontent.xx.fbcdn.net/v/t1.15752-9/473007815_914812974174734_2264539277980305085_n.jpg",
+            "https://scontent.xx.fbcdn.net/v/t1.15752-9/473121470_503519732758484_7169031855201699330_n.jpg"
+        ]
+    }
+});
