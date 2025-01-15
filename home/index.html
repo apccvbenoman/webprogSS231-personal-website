@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clar's Personal Profile Webpage</title>
+  <title>Interactive Personal Website</title>
   <!-- Bootstrap 5 CSS -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -19,58 +19,66 @@
       <h1>About Me</h1>
     </header>
 
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">My Profile</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#about-me">About Me</a></li>
+            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="#course">Course</a></li>
+            <li class="nav-item"><a class="nav-link" href="#it-experience">IT Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#dreams">Dreams/Goals</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <!-- Main Content -->
     <main class="container my-4">
-      <!-- Flexbox Table -->
-      <section class="mb-5">
-        <div class="d-flex justify-content-center">
-          <table class="table table-bordered w-75">
-            <thead>
-              <tr>
-                <th colspan="2" class="text-center">Details</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Education</th>
-                <td>
-                  <ul>
-                    <li>Hope in Christ Christian Academy</li>
-                    <li>Philippine Pasay Chung Hua Academy</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th>Course</th>
-                <td>Bachelor of Science in Computer Science Major in Software Systems</td>
-              </tr>
-              <tr>
-                <th>IT Experience</th>
-                <td>Programming</td>
-              </tr>
-              <tr>
-                <th>Hobbies/Interests</th>
-                <td>Watching movies</td>
-              </tr>
-              <tr>
-                <th>Goals/Life Dream</th>
-                <td>To be able to provide a comfortable life for myself that I can sustain</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <!-- About Me Section -->
+      <section id="about-me" class="flexbox-grid">
+        <h2>About Me</h2>
+        <p>Hello! Welcome to my personal website. This space is dedicated to showcasing my journey, interests, and aspirations. Feel free to explore!</p>
       </section>
 
-      <!-- Picture Gallery -->
-      <section>
-        <h2 class="text-center mb-4">Picture Gallery</h2>
-        <div class="row g-3">
-          <div class="col-md-4" v-for="image in images" :key="image.id">
-            <div class="card">
-              <img :src="image.src" :alt="image.alt" class="card-img-top" />
-            </div>
-          </div>
-        </div>
+      <!-- Education Section -->
+      <section id="education" class="flexbox-grid">
+        <h2>Education</h2>
+        <ul>
+          <li>Hope in Christ Christian Academy</li>
+          <li>Philippine Pasay Chung Hua Academy</li>
+        </ul>
+      </section>
+
+      <!-- Course Section -->
+      <section id="course" class="flexbox-grid">
+        <h2>Course</h2>
+        <p>Bachelor of Science in Computer Science Major in Software Systems</p>
+      </section>
+
+      <!-- IT Experience Section -->
+      <section id="it-experience" class="flexbox-grid">
+        <h2>IT Experience</h2>
+        <p>I have experience in programming and software development, which forms the foundation of my career ambitions.</p>
+      </section>
+
+      <!-- Dreams/Goals Section -->
+      <section id="dreams" class="flexbox-grid">
+        <h2>Dreams/Goals</h2>
+        <p>My goal is to provide a comfortable life for myself and those around me, one that I can sustain through my skills and hard work.</p>
       </section>
     </main>
   </div>
@@ -85,3 +93,4 @@
   ></script>
 </body>
 </html>
+
