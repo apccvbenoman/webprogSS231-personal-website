@@ -70,16 +70,6 @@
 <p>© 2025 Clarice Benoman. All Rights Reserved.</p>
 </footer>
 
-<div class="gallery text-center" id="app">
-    <div v-for="(image, index) in images" :key="index">
-        <img :src="image" :alt="'Gallery Image ' + (index + 1)" @click="viewImage(image)">
-    </div>
-</div>
-<!-- Description below the images -->
-<div class="gallery-text">
-    This is Saf and Bailey, my absolute favorite doggos in the world!
-</div>
-
   <!-- Vue.js -->
   <script src="https://cdn.jsdelivr.net/npm/vue@3.2.47/dist/vue.global.prod.js"></script>
   <!-- Custom JavaScript -->
