@@ -1,86 +1,35 @@
-/* General Styles */
 body {
-    background-color: #e29bed; /* Dark background */
-    color: #ffffff; /* Light text color */
-}
-
-/* Navbar */
-.navbar {
-    background-color: #ffffff; /* White background */
-    color: #a08d8d; /* Dark text color */
-}
-
-.navbar-brand, .nav-link {
-    color: #000000 !important; /* Ensure the links are visible */
-}
-
-/* Hero Section */
-.bg-image {
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.bg-image .mask {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-/* Cards in About Me Section */
-.card {
-    background-color: #ffffff; /* White background for cards */
-    color: #e29bed; /* Dark text color */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    border-radius: 10px; /* Rounded corners */
-}
-
-.card .card-title {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.pinimg.com/736x/22/dc/c6/22dcc69fb851bb364297b2230891d685.jpg');
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Makes the background fixed during scroll */
+    color: white; /* Adjust text color for better contrast */
+  }
+  
+  h1, h2 {
     font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.card i {
-    color: #b1eac7; /* Blue for icons */
-}
-
-/* Footer */
-footer {
-    background-color: #ffffff; /* White background for footer */
-    color: #000000; /* Dark text color */
-    padding: 1rem 0;
-}
-
-footer a {
-    color: #000000; /* Dark text for footer links */
-}
-
-footer a:hover {
-    color: #e3e89d; /* Highlight color on hover */
-}
-
-/* Back-to-Top Button */
-#backToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-    background-color: #e3e89d; /* Blue background */
-    color: #ffffff; /* White text */
-    border-radius: 50%;
-    padding: 10px 15px;
+  }
+  
+  .card {
     border: none;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-#backToTop:hover {
-    background-color: #9ec8f6; /* Darker blue on hover */
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .card {
-        margin-bottom: 20px;
-    }
-}
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .table {
+    text-align: center;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+    color: white;
+  }
 
 
   

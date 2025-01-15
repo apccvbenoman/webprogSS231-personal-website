@@ -1,76 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Profile Webpage</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="app.js">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clar's Personal Profile Webpage</title>
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+  <div id="app">
     <!-- Header -->
-    <header>
-        <h1>My Personal Profile Webpage</h1>
+    <header class="bg-primary text-white text-center py-3">
+      <h1>About Me</h1>
     </header>
 
-    <!-- About Me Section -->
-    <section class="container">
-        <div class="section-header">
-            <h2>About Me</h2>
-            <p>Hey, I'm Clar! I'm 19 years old, a BSCS-SS Student here at APC, and down below are other things about me!</p>
+    <!-- Main Content -->
+    <main class="container my-4">
+      <!-- Flexbox Table -->
+      <section class="mb-5">
+        <div class="d-flex justify-content-center">
+          <table class="table table-bordered w-75">
+            <thead>
+              <tr>
+                <th colspan="2" class="text-center">Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Education</th>
+                <td>
+                  <ul>
+                    <li>Hope in Christ Christian Academy</li>
+                    <li>Philippine Pasay Chung Hua Academy</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>Course</th>
+                <td>Bachelor of Science in Computer Science Major in Software Systems</td>
+              </tr>
+              <tr>
+                <th>IT Experience</th>
+                <td>Programming</td>
+              </tr>
+              <tr>
+                <th>Hobbies/Interests</th>
+                <td>Watching movies</td>
+              </tr>
+              <tr>
+                <th>Goals/Life Dream</th>
+                <td>To be able to provide a comfortable life for myself that I can sustain</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </section>
 
-        <!-- Info Grid (Education, Course, IT Experience) -->
-        <div class="flex-container">
-            <div class="info-card" onclick="window.location.href='#';">
-                <h3>Education</h3>
-                <p>Hope in Christ Christian Academy</p>
-                <p>Philippine Pasay Chung Hua Academy</p>
+      <!-- Picture Gallery -->
+      <section>
+        <h2 class="text-center mb-4">Picture Gallery</h2>
+        <div class="row g-3">
+          <div class="col-md-4" v-for="image in images" :key="image.id">
+            <div class="card">
+              <img :src="image.src" :alt="image.alt" class="card-img-top" />
             </div>
-            <div class="info-card" onclick="window.location.href='#';">
-                <h3>Course</h3>
-                <p>Bachelor of Science in Computer Science Major in Software Systems</p>
-            </div>
-            <div class="info-card" onclick="window.location.href='#';">
-                <h3>IT Experience</h3>
-                <p>School Programming Tasks</p>
-            </div>
+          </div>
         </div>
+      </section>
+    </main>
+  </div>
 
-        <!-- Hobbies & Goals -->
-        <div class="flex-container">
-            <div class="info-card" onclick="window.location.href='#';">
-                <h3>Hobbies/Interests</h3>
-                <p>Watching movies/series</p>
-                <p>Cooking because I love being in the kitchen :)</p>
-            </div>
-            <div class="info-card" onclick="window.location.href='#';">
-                <h3>Goals/Life Dream</h3>
-                <p>Try to race a car, responsibly</p>
-                <p>To provide a comfortable life for myself that I can sustain</p>
-            </div>
-        </div>
-
-        <!-- Picture Gallery using Vue.js -->
-        <div class="gallery text-center" id="app">
-            <div v-for="(image, index) in images" :key="index">
-                <img :src="image" :alt="'Gallery Image ' + (index + 1)" @click="viewImage(image)">
-            </div>
-        </div>
-        <!-- Description below the images -->
-        <div class="gallery-text">
-            This is Saf and Bailey, my absolute favorite doggos in the world!
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Clarice Benoman. All Rights Reserved.</p>
-    </footer>
-
-    <!-- Vue.js -->
-    <script src="app.js"></script>
-
+  <!-- Vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.47/dist/vue.global.prod.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+  <!-- Bootstrap Bundle with Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
 </body>
 </html>
