@@ -1,88 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Personal Website</title>
-  <!-- Bootstrap 5 CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <title>My first Vue page</title>
+  <link rel="stylesheet" href="css/style.css"> 
+  <link rel="stylesheet" href="css/script.css?version=0.1">
+  <link rel="stylesheet" href="css/bootstrap.css?version=0.1">
+  <link rel="stylesheet" href="css/images.css?version=0.1">
+  <link rel="stylesheet" href="css/shopping.css?version=0.1">
 </head>
 <body>
-  <div id="app">
-    <!-- Header -->
-    <header class="bg-primary text-white text-center py-3">
-      <h1>About Me</h1>
-    </header>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">My Profile</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#about-me">About Me</a></li>
-            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-            <li class="nav-item"><a class="nav-link" href="#course">Course</a></li>
-            <li class="nav-item"><a class="nav-link" href="#it-experience">IT Experience</a></li>
-            <li class="nav-item"><a class="nav-link" href="#dreams">Dreams/Goals</a></li>
-          </ul>
+    <h1>About Me</h1>
+
+    <div class="flex-container">
+        <section class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Hey, I'm Clar! I'm 19 years old, a BSCS-SS Student here at APC, and down below are other things about me!</p>
+            </div>
+              <!-- Info Grid (Education, Course, IT Experience) -->
+        <div class="flex-container">
+            <div class="info-card" onclick="window.location.href='#';">
+                <h3>Education</h3>
+                <p>Hope in Christ Christian Academy</p>
+                <p>Philippine Pasay Chung Hua Academy</p>
+            </div>
+            <div class="info-card" onclick="window.location.href='#';">
+                <h3>Course</h3>
+                <p>Bachelor of Science in Computer Science Major in Software Systems</p>
+            </div>
+            <div class="info-card" onclick="window.location.href='#';">
+                <h3>IT Experience</h3>
+                <p>School Programming Tasks</p>
+            </div>
         </div>
-      </div>
-    </nav>
 
-    <!-- Main Content -->
-    <main class="container my-4">
-      <!-- About Me Section -->
-      <section id="about-me" class="flexbox-grid">
-        <h2>About Me</h2>
-        <p>Hello! Welcome to my personal website. This space is dedicated to showcasing my journey, interests, and aspirations. Feel free to explore!</p>
-      </section>
+        <!-- Hobbies & Goals -->
+        <div class="flex-container">
+            <div class="info-card" onclick="window.location.href='#';">
+                <h3>Hobbies/Interests</h3>
+                <p>Watching movies/series</p>
+                <p>Cooking because I love being in the kitchen :)</p>
+            </div>
+            <div class="info-card" onclick="window.location.href='#';">
+                <h3>Goals/Life Dream</h3>
+                <p>Try to race a car, responsibly</p>
+                <p>To provide a comfortable life for myself that I can sustain</p>
+            </div>
+        </div>
 
-      <!-- Education Section -->
-      <section id="education" class="flexbox-grid">
-        <h2>Education</h2>
-        <ul>
-          <li>Hope in Christ Christian Academy</li>
-          <li>Philippine Pasay Chung Hua Academy</li>
-        </ul>
-      </section>
+        <!-- Picture Gallery using Vue.js -->
+        <div class="gallery text-center" id="app">
+            <div v-for="(image, index) in images" :key="index">
+                <img :src="image" :alt="'Gallery Image ' + (index + 1)" @click="viewImage(image)">
+            </div>
+        </div>
+    </section>
 
-      <!-- Course Section -->
-      <section id="course" class="flexbox-grid">
-        <h2>Course</h2>
-        <p>Bachelor of Science in Computer Science Major in Software Systems</p>
-      </section>
-
-      <!-- IT Experience Section -->
-      <section id="it-experience" class="flexbox-grid">
-        <h2>IT Experience</h2>
-        <p>I have experience in programming and software development, which forms the foundation of my career ambitions.</p>
-      </section>
-
-      <!-- Dreams/Goals Section -->
-      <section id="dreams" class="flexbox-grid">
-        <h2>Dreams/Goals</h2>
-        <p>My goal is to provide a comfortable life for myself and those around me, one that I can sustain through my skills and hard work.</p>
-      </section>
-    </main>
-  </div>
-
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2025 Clarice Benoman. All Rights Reserved.</p>
+    </footer>
+    </div>
+ 
    <!-- Footer -->
    <footer>
     <p>&copy; 2025 Clarice Benoman. All Rights Reserved.</p>
