@@ -17,8 +17,8 @@ header {
 footer {
     background-color: hsl(282, 53%, 79%) /* Soft purple background */
     color: white;
-    text-align: cover;
-    padding: 10px;
+    text-align: center;
+    padding: 20px 0;
 }
 
 /* Section Header */
