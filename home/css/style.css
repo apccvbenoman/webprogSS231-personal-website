@@ -1,55 +1,63 @@
-/* General Page Styles */
 body {
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('https://i.pinimg.com/736x/22/dc/c6/22dcc69fb851bb364297b2230891d685.jpg');
+    background: url('https://i.pinimg.com/736x/be/99/d5/be99d5c0194658e86dda7fcb1e4e5795.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    font-family: "Times New Roman", Times, serif;
+}
+header {
+    background-color: #daa1fe90;
     color: white;
-  }
-  
-  /* Flexbox-Grid Container */
-  .flexbox-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 20px 0;
     text-align: center;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-  }
-  
-  .flexbox-grid h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-  
-  .flexbox-grid ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .flexbox-grid li {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Navbar Styling */
-  .navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.75);
-  }
-  
-  .navbar-dark .navbar-nav .nav-link:hover {
+}
+footer {
+    background-color: #daa1fe90;
     color: white;
-  }
-  
-
-
-  
-  
-  
-  
+    text-align: center;
+    padding: 10px;
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.info-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.info-card:hover {
+    background-color: #f1f1f1;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    width: 200px; /* Set a fixed width for better alignment */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+}
+.gallery-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
