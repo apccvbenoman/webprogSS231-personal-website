@@ -1,24 +1,33 @@
+/* Body Background and Font */
 body {
     background: url('https://i.pinimg.com/736x/be/99/d5/be99d5c0194658e86dda7fcb1e4e5795.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: "Times New Roman", Times, serif;
 }
+
+/* Header Styling */
 header {
-    background-color: #daa1fe90;
+    background-color: #8e44ad; /* Soft purple background */
     color: white;
     padding: 20px 0;
     text-align: center;
 }
+
+/* Footer Styling */
 footer {
-    background-color: #daa1fe90;
+    background-color: #8e44ad; /* Soft purple background */
     color: white;
     text-align: center;
     padding: 10px;
 }
+
+/* Section Header */
 .section-header {
     text-align: center;
     margin-bottom: 30px;
 }
+
+/* Info Card Styling */
 .info-card {
     background-color: white;
     border-radius: 10px;
@@ -28,15 +37,20 @@ footer {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .info-card:hover {
     background-color: #f1f1f1;
 }
+
+/* Flex Container for Layout */
 .flex-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
+
+/* Gallery Styling */
 .gallery {
     display: flex;
     justify-content: center;
@@ -44,6 +58,7 @@ footer {
     flex-wrap: wrap;
     margin-top: 30px;
 }
+
 .gallery img {
     max-width: 100%;
     height: auto;
@@ -52,12 +67,45 @@ footer {
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
+
 .gallery img:hover {
     transform: scale(1.05);
 }
+
+/* Gallery Text */
 .gallery-text {
     text-align: center;
     margin-top: 10px;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+/* Bootstrap Override - Navbar, Buttons, etc. */
+.navbar, .navbar-dark .navbar-nav .nav-link {
+    background-color: #8e44ad; /* Soft purple navbar */
+    color: white !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #f0e68c !important; /* Light yellow hover color */
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #8e44ad !important; /* Soft purple button */
+    border-color: #8e44ad !important;
+}
+
+.btn-primary:hover {
+    background-color: #6f2b8d !important; /* Darker purple hover */
+    border-color: #6f2b8d !important;
+}
+
+/* Links */
+a {
+    color: #8e44ad; /* Soft purple links */
+}
+
+a:hover {
+    color: #f0e68c; /* Light yellow link hover */
 }
