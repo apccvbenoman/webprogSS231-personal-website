@@ -24,7 +24,6 @@
                 <a href="#hobbies">Hobbies</a>
                 <a href="#goals">Goals</a>
                 <a href="gallery">Gallery</a>
-                <a href="comments">Comments</a>
             </nav>
 
     <div class="flex-container">
@@ -69,8 +68,9 @@
         </div>
 
         <section id="gallery">
-            <h2>This is Saf and Bailey, my absolute favorite doggos in the world!</h2>
             <div id="gallery" div class="gallery">
+                <h2>Picture Gallery</h2>
+                <p>This is bailey and saf, my absolute favorite doggos in the world!</p>
                     <figure v-for="image in images" :key="image.id">
                         <img :src="image.src" :alt="image.alt">
                     </figure>
