@@ -62,8 +62,8 @@
             <div id="goals" class="goals"></div>
             <div class="info-card" onclick="window.location.href='goals';">
                 <h3>Goals/Life Dream</h3>
-                <p>Try to race a car, responsibly</p>
-                <p>My ultimate goal is to provide a comfortable life for myself and people that I love and live with contentment</p>
+                <p>Try to race a car, responsibly!</p>
+                <p>My ultimate goal is to provide a comfortable life for myself and people that I love and live it with contentment</p>
             </div>
         </div>
 
@@ -96,34 +96,7 @@
         }
     }).mount('#gallery-app');
 
-    const { createApp } = Vue;
-
-createApp2({
-    data() {
-        return {
-            newComment: {
-                name: '',
-                message: ''
-            },
-            comments: [],
-        
-        };
-    },
-    methods: {
-        addComment() {
-            if (this.newComment.name && this.newComment.message) {
-                this.comments.push({
-                    name: this.newComment.name,
-                    message: this.newComment.message
-                });
-                this.newComment.name = '';
-                this.newComment.message = '';
-            }
-        }
-    }
-}).mount('#app2');
-
-  </script>
+    </script>
 </body>
 </html>
 
