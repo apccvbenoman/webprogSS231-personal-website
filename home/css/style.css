@@ -56,7 +56,7 @@ header {
 }
 
 .nav a:hover {
-  color: hsl(285, 75%, 78%);
+  color: hwb(285 45% 13%);
   text-decoration: underline;
 }
 
