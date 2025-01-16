@@ -43,12 +43,12 @@
                 <p>Studied a bit of Mandarin in High School </p>
             </div>
             <div id="course" class="course">
-                <div class="info-card" onclick="window.location.href='#';">
+                <div class="info-card" onclick="window.location.href='course';">
                 <h3>Course</h3>
                 <p>Bachelor of Science in Computer Science Major in Software Systems</p>
             </div>
             <div id="it experience" class="it experience">
-            <div class="info-card" onclick="window.location.href='#';">
+            <div class="info-card" onclick="window.location.href='it experience';">
                 <h3>IT Experience</h3>
                 <p>School Programming Tasks</p>
                 <p>Database Management</p>
@@ -61,7 +61,7 @@
                 <p>Learning something new to cook</p>
             </div>
             <div id="goals" class="goals"></div>
-            <div class="info-card" onclick="window.location.href='#';">
+            <div class="info-card" onclick="window.location.href='goals';">
                 <h3>Goals/Life Dream</h3>
                 <p>Try to race a car, responsibly</p>
                 <p>My ultimate goal is to provide a comfortable life for myself and people that I love and live with contentment</p>
@@ -77,20 +77,7 @@
                 </div>
             </div>
         </section>
-        <section id="Comments">
-            <h2>Let me know what you think!</h2>
-            <div id="Comments" div class="comments">
-                <form @submit.prevent="addMessage">
-                    <input type="text" v-model="name" placeholder="Your Name" required>
-                    <textarea v-model="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Leave Comment</button>
-                </form>
-                <ul>
-                    <li v-for="Comments" :key="entry.id">
-                    </li>
-                </ul>
-            </div>
-        </section>
+       
         <footer>
             <p>© 2025 Clarice V. Benoman. All Rights Reserved.</p>
         </footer>

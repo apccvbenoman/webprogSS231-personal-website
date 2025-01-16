@@ -153,72 +153,11 @@ header {
     footer {
         padding: 1rem 0;
     }
-}
 
-.comments-section {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: hsl(294, 87%, 91%);
-  }
-  
-  .comments-section h2 {
-    font-size: 1.5rem;
-    color: hsl(0, 4%, 45%);
-    margin-bottom: 15px;
-  }
-  
-  .comments-section form {
-    margin-bottom: 20px;
-  }
-  
-  .comments-section label {
-    display: block;
-    font-size: 1rem;
-    color: hsl(0, 4%, 45%);
-    margin-bottom: 5px;
-  }
-  
-  .comments-section input,
-  .comments-section textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid hsl(295, 59%, 82%);
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  .comments-section .comments-list {
-    margin-top: 20px;
-  }
-  
-  .comments-section .comment {
-    margin-bottom: 15px;
-    padding: 10px;
-    background-color: hsl(300, 70%, 80%);
-  }
-  
-  .comments-section .comment h3 {
-    margin-bottom: 5px;
-    font-size: 1.2rem;
-    color: hsl(0, 4%, 45%);
-  }
-  
-  .comments-section .comment p {
-    font-size: 1rem;
-    color: hsl(0, 4%, 45%);
-  }
-  
-  .container {
-    display: grid;
-    grid-template-rows: auto 1fr auto; 
-    height: 100vh;
-  }
-  
   .footer {
     background-color: hsl(282, 53%, 79%);
     color: hsl(0, 4%, 45%);
-    text-align: center;
+    text-align: cover;
     padding: 15px;
     font-size: 0.9rem;
   }
