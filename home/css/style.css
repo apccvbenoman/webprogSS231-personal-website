@@ -79,40 +79,20 @@ footer {
     border: 2px solid hsl(289, 75%, 76%);
     border-radius: 8px;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.7);
 }
 
 .gallery img {
     width: 100%;
     height: auto;
     display: block;
-    border-bottom: 2px solid hsl(289, 75%, 76%);
 }
 
 .gallery figcaption {
     padding: 0.5rem;
     font-size: 0.9rem;
-    color: #fff;
+    color: hsl(0, 4%, 45%);
     background: rgba(0, 0, 0, 0.8);
 }
-
-footer .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 1rem 0;
-}
-
-footer .social-links a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
 
 @media only screen and (max-width: 768px) {
     header h1 {
