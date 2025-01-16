@@ -77,7 +77,7 @@ footer {
     margin: 0;
     text-align: center;
     border: 2px solid hsl(289, 75%, 76%);
-    border-radius: 8px;
+    border-radius: 4px;
     overflow: hidden;
 }
 
