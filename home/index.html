@@ -95,6 +95,33 @@
         }
     }).mount('#gallery-app');
 
+    const { createApp } = Vue;
+
+createApp2({
+    data() {
+        return {
+            newComment: {
+                name: '',
+                message: ''
+            },
+            comments: [],
+        
+        };
+    },
+    methods: {
+        addComment() {
+            if (this.newComment.name && this.newComment.message) {
+                this.comments.push({
+                    name: this.newComment.name,
+                    message: this.newComment.message
+                });
+                this.newComment.name = '';
+                this.newComment.message = '';
+            }
+        }
+    }
+}).mount('#app2');
+
   </script>
 </body>
 </html>
