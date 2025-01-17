@@ -17,86 +17,97 @@
             </header>
 
             <nav class="nav">
-                <a href="#about me">About Me</a>
+                <a href="#about-me">About Me</a>
                 <a href="#education">Education</a>
                 <a href="#course">Course</a>
-                <a href="#it experience">IT Experience</a>
+                <a href="#it-experience">IT Experience</a>
                 <a href="#hobbies">Hobbies</a>
                 <a href="#goals">Goals</a>
-                <a href="gallery">Gallery</a>
+                <a href="#gallery">Gallery</a>
             </nav>
 
-    <div class="flex-container">
-        <section class="container">
-            <div class="section-header">
-                <h2>About Me</h2>
-                <p>Hey, I'm Clar! I'm 19 years old, a BSCS-SS Student here at APC, and down below are other things about me!</p>
-            </div>
-              
-        <div class="flex-container">
-            <div id="education" class="education">
-            <div class="info-card" onclick="window.location.href='education';">
-                <h3>Education</h3>
-                <p>Primary - Elementary: Hope in Christ Christian Academy</p>
-                <p>High School: Philippine Pasay Chung Hua Academy</p>
-                <p>Studied a bit of Mandarin in High School </p>
-            </div>
-            <div id="course" class="course">
-                <div class="info-card" onclick="window.location.href='course';">
-                <h3>Course</h3>
-                <p>Bachelor of Science in Computer Science Major in Software Systems</p>
-            </div>
-            <div id="it experience" class="it experience">
-            <div class="info-card" onclick="window.location.href='it experience';">
-                <h3>IT Experience</h3>
-                <p>School Programming Tasks</p>
-                <p>Database Management</p>
-            </div>
-        <div class="flex-container">
-            <div id="hobbies" class="hobbies">
-            <div class="info-card" onclick="window.location.href='hobbies';">
-                <h3>Hobbies/Interests</h3>
-                <p>Watching movies/series</p>
-                <p>Learning something new to cook</p>
-            </div>
-            <div id="goals" class="goals"></div>
-            <div class="info-card" onclick="window.location.href='goals';">
-                <h3>Goals/Life Dream</h3>
-                <p>Try to race a car, responsibly!</p>
-                <p>My ultimate goal is to provide a comfortable life for myself and people that I love and live it with contentment</p>
+            <div class="flex-container">
+                <section class="container">
+                    <div class="section-header">
+                        <h2>About Me</h2>
+                        <p>Hey, I'm Clar! I'm 19 years old, a BSCS-SS Student here at APC, and down below are other things about me!</p>
+                    </div>
+
+                    <div class="flex-container">
+                        <div id="education" class="education">
+                            <div class="info-card" onclick="window.location.href='education';">
+                                <h3>Education</h3>
+                                <p>Primary - Elementary: Hope in Christ Christian Academy</p>
+                                <p>High School: Philippine Pasay Chung Hua Academy</p>
+                                <p>Studied a bit of Mandarin in High School</p>
+                            </div>
+                        </div>
+
+                        <div id="course" class="course">
+                            <div class="info-card" onclick="window.location.href='course';">
+                                <h3>Course</h3>
+                                <p>Bachelor of Science in Computer Science Major in Software Systems</p>
+                            </div>
+                        </div>
+
+                        <div id="it-experience" class="it-experience">
+                            <div class="info-card" onclick="window.location.href='it-experience';">
+                                <h3>IT Experience</h3>
+                                <p>School Programming Tasks</p>
+                                <p>Database Management</p>
+                            </div>
+                        </div>
+
+                        <div id="hobbies" class="hobbies">
+                            <div class="info-card" onclick="window.location.href='hobbies';">
+                                <h3>Hobbies/Interests</h3>
+                                <p>Watching movies/series</p>
+                                <p>Learning something new to cook</p>
+                            </div>
+                        </div>
+
+                        <div id="goals" class="goals">
+                            <div class="info-card" onclick="window.location.href='goals';">
+                                <h3>Goals/Life Dream</h3>
+                                <p>Try to race a car, responsibly!</p>
+                                <p>My ultimate goal is to provide a comfortable life for myself and people that I love and live it with contentment</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="gallery-app">
+                    <div class="gallery">
+                        <h2>Picture Gallery</h2>
+                        <p>This is Bailey and Saf, my absolute favorite doggos in the world!</p>
+                        <figure v-for="image in images" :key="image.id">
+                            <img :src="image.src" :alt="image.alt">
+                        </figure>
+                    </div>
+                </section>
+
+                <footer>
+                    <p>© 2025 Clarice V. Benoman | Asia Pacific College.</p>
+                </footer>
             </div>
         </div>
+    </div>
 
-        <section id="gallery">
-            <div id="gallery" div class="gallery">
-                <h2>Picture Gallery</h2>
-                <p>This is bailey and saf, my absolute favorite doggos in the world!</p>
-                    <figure v-for="image in images" :key="image.id">
-                        <img :src="image.src" :alt="image.alt">
-                    </figure>
-                </div>
-            </div>
-        </section>
-       
-        <footer>
-            <p>© 2025 Clarice V. Benoman | Asia Pacific College.</p>
-        </footer>
+    <script>
+        // Vue.js for Picture Gallery
+        const galleryApp = Vue.createApp({
+            data() {
+                return {
+                    images: [
+                        { id: 1, src: "https://example.com/images/bab.jpg", alt: "Bailey 1" },
+                        { id: 2, src: "https://example.com/images/bai.jpg", alt: "Bailey 2" },
+                        { id: 3, src: "https://example.com/images/bae2.jpg", alt: "Bailey 3" },
+                        { id: 4, src: "https://example.com/images/saf.jpg", alt: "Saf" }
+                    ]
+                };
+            }
+        }).mount('#gallery-app');
+    </script>
 
-        <script>
-            // Vue.js for Picture Gallery
-            const galleryApp = Vue.createApp({
-                data() {
-                    return {
-                        images: [
-                            { id: 1, src: "https://github.com/apccvbenoman/webprogSS231-personal-website/raw/feature/2_CVB_customize_my_website/home/images/bab.jpg"},
-                            { id: 2, src: "https://github.com/apccvbenoman/webprogSS231-personal-website/raw/feature/2_CVB_customize_my_website/home/images/bai.jpg"},
-                            { id: 3, src: "https://github.com/apccvbenoman/webprogSS231-personal-website/raw/feature/2_CVB_customize_my_website/home/images/bae2.jpg"},
-                            { id: 4, src: "https://github.com/apccvbenoman/webprogSS231-personal-website/raw/feature/2_CVB_customize_my_website/home/images/saf.jpg"}
-                        ]
-                    };
-                }
-            }).mount('#gallery-app');
-        </script>
-        
-    </body>
-    </html>
+</body>
+</html>
