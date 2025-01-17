@@ -59,40 +59,45 @@ header {
     color: hsl(282, 53%, 40%);
 }
 
-/* Section Headers */
+/* Section Header (About Me) */
 .section-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 h2 {
-    margin-bottom: 10px;
     color: hsl(282, 53%, 40%);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Flex Containers */
+/* Flex Container Styles */
 .flex-container {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 1100px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    margin: 20px auto;
+    width: 80%; /* Centers the container within the page */
+    align-items: center;
+    transform: rotate(-10deg); /* Rotates the flexbox diagonally */
 }
 
-/* Info Cards */
+/* Individual Flex Items (Info Cards) */
 .info-card {
     background-color: white;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
     width: 300px;
+    text-align: center;
     transition: transform 0.3s, background-color 0.3s;
+    transform: rotate(10deg); /* Counter-rotates items to appear level */
 }
 
 .info-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) rotate(10deg); /* Keeps hover effect consistent */
     background-color: hsl(282, 53%, 90%);
 }
 
@@ -137,12 +142,6 @@ footer {
     margin-top: 20px;
 }
 
-/* About Me Section */
-.about-me {
-    text-align: center;
-    padding: 20px;
-}
-
 /* Media Queries */
 @media only screen and (max-width: 768px) {
     header h1 {
@@ -165,11 +164,6 @@ footer {
     .gallery {
         grid-template-columns: 1fr;
     }
-
-    .flex-container {
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -186,3 +180,4 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
