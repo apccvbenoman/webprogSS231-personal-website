@@ -36,14 +36,9 @@ header {
     text-align: center;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
 /* Navigation */
 .nav {
-    background-color: hwb(282 54% 7%);
+    background-color: hwb(282 46% 18%);
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -61,25 +56,18 @@ header h1 {
 
 .nav a:hover {
     background-color: white;
-    color: rgb(167, 81, 207);
+    color: hwb(282, 46%, 18%);
 }
 
-/* Main Section */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
+/* Section Headers */
 .section-header {
+    text-align: center;
     margin-bottom: 30px;
 }
 
 h2 {
     margin-bottom: 10px;
-    color: hsl(282, 53%, 40%);
-    font-size: 2rem;
+    color: hsl(282, 63%, 63%);
 }
 
 /* Flex Containers */
@@ -90,7 +78,7 @@ h2 {
     gap: 20px;
     padding: 20px;
     margin: 0 auto;
-    max-width: 1100px;
+    max-width: 1200px;
 }
 
 /* Info Cards */
@@ -99,20 +87,14 @@ h2 {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
-.info-card h3 {
-    color: hsl(282, 56%, 54%);
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-}
-
-.info-card p {
-    font-size: 1rem;
-    line-height: 1.8;
+.info-card:hover {
+    transform: translateY(-5px);
+    background-color: hsl(282, 53%, 90%);
 }
 
 /* Gallery Section */
@@ -124,7 +106,7 @@ h2 {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     margin: 0 auto;
-    max-width: 1100px;
+    max-width: 1200px;
 }
 
 gallery figure {
@@ -146,7 +128,7 @@ gallery figcaption {
     padding: 0.5rem;
     font-size: 0.9rem;
     color: white;
-    background: rgba(142, 139, 139, 0.7);
+    background: hsl(282, 53%, 40%);
 }
 
 /* Footer */
@@ -196,6 +178,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
