@@ -42,7 +42,7 @@ header h1 {
 
 /* Navigation */
 .nav {
-    background-color: hsl(282, 53%, 40%);
+    background-color: hwb(282 55% 16%);
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -77,7 +77,7 @@ main {
 }
 
 .about h2 {
-    color: hsl(282, 53%, 40%);
+    color: hsl(0, 4%, 45%);
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
@@ -130,7 +130,7 @@ main {
 
 /* Info Cards (for future sections if needed) */
 .info-card h3 {
-    color: hsl(282, 56%, 54%);
+    color: hsl(282, 54%, 64%);
     margin-bottom: 10px;
     font-size: 1.5rem;
 }
