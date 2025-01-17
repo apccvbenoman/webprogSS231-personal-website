@@ -79,6 +79,7 @@ main {
 .about {
     margin-bottom: 60px;
     text-align: center;
+    flex-direction: column;
 }
 
 .section-header {
