@@ -100,11 +100,12 @@ h2 {
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .info-card h3 {
-    color: hsl(282, 53%, 40%);
+    color: hsl(282, 56%, 54%);
     margin-bottom: 10px;
     font-size: 1.5rem;
 }
@@ -145,7 +146,7 @@ gallery figcaption {
     padding: 0.5rem;
     font-size: 0.9rem;
     color: white;
-    background: hsl(282, 53%, 40%);
+    background: rgba(142, 139, 139, 0.7);
 }
 
 /* Footer */
