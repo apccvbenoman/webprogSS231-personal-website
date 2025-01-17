@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +11,7 @@ body {
     color: hsl(0, 4%, 45%);
     position: relative;
     overflow-x: hidden;
+    background-color: #f8f8f8; /* Light background for readability */
 }
 
 body::before {
@@ -23,43 +25,44 @@ body::before {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    opacity: 1;
+    opacity: 0.7;
     z-index: -1;
 }
 
+/* Header */
 header {
-    background-color: hsl(282, 53%, 79%); /* Soft purple background */
+    background-color: hsl(282, 53%, 79%);
     color: white;
     padding: 20px 0;
     text-align: center;
 }
 
-.section-header {
-    text-align: center;
-    margin-bottom: 30px;
+header h1 {
+    font-size: 2.5rem;
 }
 
+/* Navigation */
 .nav {
-    background-color: hwb(297 53% 18%);
+    background-color: hsl(297, 53%, 18%);
     display: flex;
     justify-content: center;
     padding: 10px 0;
-    position: relative;
 }
 
 .nav a {
-  color: hsl(0, 4%, 45%);
-  text-decoration: none;
-  font-size: 1.2rem;
-  margin: 0 15px;
-  transition: color 0.3s;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 15px;
+    transition: color 0.3s;
 }
 
 .nav a:hover {
-  color: rgb(179, 87, 209);
-  text-decoration: underline;
+    color: rgb(179, 87, 209);
+    text-decoration: underline;
 }
 
+/* Info Cards */
 .info-card {
     background-color: white;
     border-radius: 10px;
@@ -67,24 +70,31 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .info-card:hover {
     background-color: #f1f1f1;
+    transform: translateY(-5px);
 }
 
+/* Flex Container */
 .flex-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding: 20px;
 }
 
+/* Gallery */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
 }
 
 .gallery figure {
@@ -94,6 +104,7 @@ header {
     border-radius: 8px;
     overflow: hidden;
     background: rgba(142, 139, 139, 0.7);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .gallery img {
@@ -107,43 +118,40 @@ header {
     padding: 0.5rem;
     font-size: 0.9rem;
     color: #fff;
-    background: rgba(142, 139, 139, 0.7);
+    background: rgba(142, 139, 139, 0.8);
 }
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: hsl(282, 53%, 79%);
+    color: white;
+    padding: 10px 0;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
 @media only screen and (max-width: 768px) {
     header h1 {
         font-size: 2rem;
     }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-
-    main {
-        margin: 1rem;
-        padding: 1rem;
+    .nav a {
+        font-size: 1rem;
     }
 
     .gallery {
-        gap: 10px;
+        gap: 15px;
     }
 
     footer {
         padding: 1rem 0;
     }
-
+}
 
 @media only screen and (max-width: 480px) {
     header h1 {
         font-size: 1.5rem;
-    }
-
-    nav ul {
-        padding: 0;
     }
 
     .gallery {
@@ -153,4 +161,4 @@ header {
     footer {
         padding: 1rem 0;
     }
-
+}
