@@ -74,6 +74,7 @@ main {
 /* About Section */
 .about {
     margin-bottom: 60px;
+    text-align: center;
 }
 
 .about h2 {
